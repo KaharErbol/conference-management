@@ -16,7 +16,9 @@ window.addEventListener('DOMContentLoaded', async () => {
     formTag.addEventListener("submit", async event => {
         event.preventDefault();
         const formData = new FormData(formTag);
+        // console.log(formData);
         const json = JSON.stringify(Object.fromEntries(formData));
+        // console.log(json);
         const conferenceUrl = 'http://localhost:8000/api/conferences/';
         const fetchConfig = {
             method: "post",
